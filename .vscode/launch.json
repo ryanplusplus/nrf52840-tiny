@@ -1,0 +1,56 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Target (jlink)",
+      "cwd": "${workspaceRoot}",
+      "executable": "${workspaceFolder}/build/target.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "jlink",
+      "device": "ATSAMD21G18",
+      "svdFile": "${workspaceFolder}/build/target.svd",
+      "preLaunchTask": "jlink-debug-deps"
+    },
+    {
+      "name": "Target (openocd, jlink)",
+      "cwd": "${workspaceRoot}",
+      "executable": "${workspaceFolder}/build/target.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "configFiles": [
+        "${workspaceRoot}/openocd/debug.cfg"
+      ],
+      "svdFile": "${workspaceFolder}/build/target.svd",
+      "preLaunchTask": "openocd-debug-deps"
+    },
+    {
+      "name": "Target (black_magic)",
+      "cwd": "${workspaceRoot}",
+      "executable": "${workspaceFolder}/build/target.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "bmp",
+      "BMPGDBSerialPort": "/dev/ttyACM0",
+      "powerOverBMP": "disable",
+      "svdFile": "${workspaceFolder}/build/target.svd",
+      "preLaunchTask": "black-magic-debug-deps",
+    },
+    {
+      "name": "Target (black_magic, powered)",
+      "cwd": "${workspaceRoot}",
+      "executable": "${workspaceFolder}/build/target.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "bmp",
+      "BMPGDBSerialPort": "/dev/ttyACM0",
+      "powerOverBMP": "enable",
+      "svdFile": "${workspaceFolder}/build/target.svd",
+      "preLaunchTask": "black-magic-debug-deps",
+    }
+  ]
+}

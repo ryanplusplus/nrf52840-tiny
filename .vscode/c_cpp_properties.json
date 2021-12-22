@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "name": "nRF52840",
+      "defines": [
+        "DEVELOP_IN_NRF52840",
+        "NRF52840_XXAA"
+      ],
+      "includePath": [
+        "${workspaceFolder}/lib/CMSIS/CMSIS/Include",
+        "${workspaceFolder}/lib/nrf-mdk/8.44.1",
+        "${workspaceFolder}/lib/tiny/include",
+        "${workspaceFolder}/src/hardware"
+      ],
+      "intelliSenseMode": "gcc-arm",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "compilerPath": "arm-none-eabi-gcc"
+    }
+  ],
+  "version": 4
+}

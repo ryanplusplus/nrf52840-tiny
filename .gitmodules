@@ -1,0 +1,15 @@
+[submodule "lib/nrf-mdk"]
+	path = lib/nrf-mdk
+	url = https://github.com/ryanplusplus/nrf-mdk
+[submodule "lib/tiny"]
+	path = lib/tiny
+	url = https://github.com/ryanplusplus/tiny
+[submodule "lib/tiny-devices"]
+	path = lib/tiny-devices
+	url = https://github.com/ryanplusplus/tiny-devices
+[submodule "tools"]
+	path = tools
+	url = https://github.com/ryanplusplus/arm-none-eabi-gcc-tools
+[submodule "lib/CMSIS"]
+	path = lib/CMSIS
+	url = https://github.com/ARM-software/CMSIS
