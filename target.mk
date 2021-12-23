@@ -14,6 +14,7 @@ BLACK_MAGIC_POWER_TARGET ?= N
 DEFINES := \
   DEVELOP_IN_NRF52840 \
   NRF52840_XXAA \
+  __STARTUP_CLEAR_BSS \
 
 include tools/defaults.mk
 

@@ -3,8 +3,8 @@
     {
       "name": "nRF52840",
       "defines": [
-        "DEVELOP_IN_NRF52840",
-        "NRF52840_XXAA"
+        "NRF52840_XXAA",
+        "__STARTUP_CLEAR_BSS"
       ],
       "includePath": [
         "${workspaceFolder}/lib/CMSIS/CMSIS/Include",
