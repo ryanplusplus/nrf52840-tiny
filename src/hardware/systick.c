@@ -41,8 +41,6 @@ i_tiny_time_source_t* systick_init(void)
     NVIC_SystemReset();
   }
 
-  NVIC_SetPriority(SysTick_IRQn, 7);
-
   self.interface.api = &api;
 
   return &self.interface;

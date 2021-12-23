@@ -8,6 +8,7 @@
 
 #include "nrf52840.h"
 #include "clock.h"
+#include "interrupts.h"
 #include "watchdog.h"
 #include "systick.h"
 #include "heartbeat_p1_15.h"
