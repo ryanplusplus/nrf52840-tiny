@@ -4,6 +4,7 @@
  */
 
 #include "nrf52840.h"
+#include "system_nrf52840.h"
 #include "systick.h"
 #include "clock.h"
 
@@ -36,7 +37,7 @@ static const i_tiny_time_source_api_t api = { ticks };
 
 i_tiny_time_source_t* systick_init(void)
 {
-  if(SysTick_Config(clock_gclk_main_frequency / 1000)) {
+  if(SysTick_Config(SystemCoreClock / 1000)) {
     NVIC_SystemReset();
   }
 
