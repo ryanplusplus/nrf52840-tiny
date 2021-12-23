@@ -30,3 +30,4 @@ make -f target.mk upload
 - [NRF52840 Hardware Manual](https://infocenter.nordicsemi.com/pdf/nRF52840_PS_v1.1.pdf)
 - [Seeeduino XIAO BLE Pinout](https://files.seeedstudio.com/wiki/XIAO-BLE/pinout3.png)
 - [Adafruit nRF52840 Feather Pinout](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/pinouts)
+- [Adafruit nRF52840 Feather Schematic](https://cdn-learn.adafruit.com/assets/assets/000/068/545/original/circuitpython_nRF52840_Schematic_REV-D.png?1546364754)

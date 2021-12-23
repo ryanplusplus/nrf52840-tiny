@@ -22,6 +22,7 @@ int main(void)
 
   while(1) {
     tiny_timer_group_run(&timer_group);
-    __WFI();
+    // WFI kills this... not sure why yet
+    // __WFI();
   }
 }

@@ -10,8 +10,8 @@
 #include "clock.h"
 #include "watchdog.h"
 #include "systick.h"
-#include "heartbeat_pa17.h"
+#include "heartbeat_p1_15.h"
 
-#define heartbeat_init heartbeat_pa17_init
+#define heartbeat_init heartbeat_p1_15_init
 
 #endif

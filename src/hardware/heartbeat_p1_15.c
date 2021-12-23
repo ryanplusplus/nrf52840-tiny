@@ -6,12 +6,10 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "nrf52840.h"
-#include "heartbeat_pa17.h"
+#include "heartbeat_p1_15.h"
 
 enum {
-  // pin = PIN_PA17,
-  // pin_group = pin / 32,
-  // pin_mask = 1 << (pin % 32),
+  pin_mask = 1 << 15,
   half_period_in_msec = 500,
 };
 
@@ -21,13 +19,22 @@ static struct {
 
 static void blink(tiny_timer_group_t* group, void* context)
 {
+  static bool state;
   (void)group;
   (void)context;
-  // PORT->Group[pin_group].OUTTGL.reg = pin_mask;
+
+  state = !state;
+
+  if(state) {
+    NRF_P1->OUTSET = pin_mask;
+  }
+  else {
+    NRF_P1->OUTCLR = pin_mask;
+  }
 }
 
-void heartbeat_pa17_init(tiny_timer_group_t* timer_group)
+void heartbeat_p1_15_init(tiny_timer_group_t* timer_group)
 {
-  // PORT->Group[pin_group].DIRSET.reg = pin_mask;
+  NRF_P1->DIRSET = pin_mask;
   tiny_timer_start_periodic(timer_group, &self.timer, half_period_in_msec, NULL, blink);
 }
