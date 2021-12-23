@@ -11,7 +11,7 @@
       "request": "launch",
       "type": "cortex-debug",
       "servertype": "jlink",
-      "device": "ATSAMD21G18",
+      "device": "nRF52840_xxAA",
       "svdFile": "${workspaceFolder}/build/target.svd",
       "preLaunchTask": "jlink-debug-deps"
     },

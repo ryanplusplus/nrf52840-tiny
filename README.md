@@ -3,6 +3,7 @@ Sample project using [`tiny`](https://github.com/ryanplusplus/tiny) with nRF5284
 
 ## Setup
 - Install `gcc-arm-none-eabi`
+- Install [`openocd`](https://sourceforge.net/p/openocd/code/ci/master/tree/)
 
 ## Use
 ### Compile
