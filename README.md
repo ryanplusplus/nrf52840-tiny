@@ -1,4 +1,4 @@
-# samd21-tiny
+# nrf52840-tiny
 Sample project using [`tiny`](https://github.com/ryanplusplus/tiny) with nRF52840.
 
 ## Setup
