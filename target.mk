@@ -47,7 +47,7 @@ SRC_DIRS := \
   src/board \
   src/hardware \
 
-include lib_tiny.mk
+include lib/tiny/lib_tiny.mk
 include lib_mdk.mk
 
 include tools/tools.mk
