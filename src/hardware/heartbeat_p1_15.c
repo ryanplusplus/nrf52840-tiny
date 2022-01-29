@@ -9,7 +9,8 @@
 #include "heartbeat_p1_15.h"
 
 enum {
-  pin_mask = 1 << 15,
+  pin = 15,
+  pin_mask = 1 << pin,
   half_period_in_msec = 500,
 };
 

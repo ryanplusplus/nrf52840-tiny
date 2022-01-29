@@ -6,10 +6,10 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "nrf52840.h"
-#include "heartbeat_p1_10.h"
+#include "heartbeat_p0_6.h"
 
 enum {
-  pin = 10,
+  pin = 6,
   pin_mask = 1 << pin,
   half_period_in_msec = 500,
 };
@@ -27,15 +27,15 @@ static void blink(tiny_timer_group_t* group, void* context)
   state = !state;
 
   if(state) {
-    NRF_P1->OUTSET = pin_mask;
+    NRF_P0->OUTSET = pin_mask;
   }
   else {
-    NRF_P1->OUTCLR = pin_mask;
+    NRF_P0->OUTCLR = pin_mask;
   }
 }
 
-void heartbeat_p1_10_init(tiny_timer_group_t* timer_group)
+void heartbeat_p0_6_init(tiny_timer_group_t* timer_group)
 {
-  NRF_P1->DIRSET = pin_mask;
+  NRF_P0->DIRSET = pin_mask;
   tiny_timer_start_periodic(timer_group, &self.timer, half_period_in_msec, NULL, blink);
 }

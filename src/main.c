@@ -3,7 +3,7 @@
  * @brief
  */
 
-#include "board/feather.h"
+#include "board/xiao.h"
 #include "tiny_timer.h"
 
 static tiny_timer_group_t timer_group;
