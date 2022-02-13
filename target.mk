@@ -6,7 +6,7 @@ BUILD_DIR := ./build
 mdk_VERSION := 8.44.1
 
 CPU := cortex-m4
-LINKER_SCRIPT := lib/nrf-mdk/$(mdk_VERSION)/nrf52840_xxaa.ld
+LINKER_SCRIPT := target.ld
 
 SVD := lib/nrf-mdk/$(mdk_VERSION)/nrf52840.svd
 
