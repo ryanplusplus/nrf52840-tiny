@@ -1,18 +1,15 @@
-LIBS := mdk $(LIBS)
+$(call create_lib_with_defaults,mdk)
 
 INC_DIRS += \
   lib/CMSIS/CMSIS/Include \
   lib/nrf-mdk/$(mdk_VERSION) \
 
 CFLAGS += -Wno-pedantic
-
-LDFLAGS += -L lib/nrf-mdk/$(mdk_VERSION)
+mdk_CFLAGS += -Wno-pedantic
 
 mdk_DEFINES := $(DEFINES)
-mdk_ASFLAGS := $(ASFLAGS)
-mdk_CPPFLAGS := $(CPPFLAGS)
-mdk_CFLAGS := $(CFLAGS)
-mdk_CXXFLAGS := $(CXXFLAGS)
+
+LDFLAGS += -L lib/nrf-mdk/$(mdk_VERSION)
 
 mdk_INC_DIRS := $(INC_DIRS) \
 
