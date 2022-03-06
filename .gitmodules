@@ -13,3 +13,6 @@
 [submodule "lib/CMSIS"]
 	path = lib/CMSIS
 	url = https://github.com/ARM-software/CMSIS
+[submodule "lib/nrf-softdevice"]
+	path = lib/nrf-softdevice
+	url = https://github.com/ryanplusplus/nrf-softdevice
