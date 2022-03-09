@@ -6,7 +6,6 @@ BUILD_DIR := ./build
 mdk_VERSION := 8.44.1
 softdevice_VERSION := s140_nrf52_7.3.0
 
-
 CPU := cortex-m4
 LINKER_SCRIPT := target.ld
 
@@ -32,10 +31,10 @@ SRC_DIRS := \
 
 include lib/tiny/lib_tiny.mk
 include lib_mdk.mk
+include lib_softdevice.mk
 
 include tools/tools.mk
 include docs.mk
-
 include softdevice.mk
 
 .PHONY: watch
