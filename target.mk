@@ -33,10 +33,14 @@ include lib/tiny/lib_tiny.mk
 include lib_mdk.mk
 include lib_softdevice.mk
 
-include tools/tools.mk
-include docs.mk
-include softdevice.mk
+.PHONY: all
+all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex
+	@$(SIZE) $<
 
 .PHONY: watch
 watch:
 	@rerun "$(MAKE) --no-print-directory -f $(firstword $(MAKEFILE_LIST))"
+
+include tools/tools.mk
+include docs.mk
+include softdevice.mk
