@@ -10,6 +10,7 @@
       "includePath": [
         "${workspaceFolder}/lib/CMSIS/CMSIS/Include",
         "${workspaceFolder}/lib/nrf-mdk/8.44.1",
+        "${workspaceFolder}/lib/nrf-softdevice/s140_nrf52_7.3.0/s140_nrf52_7.3.0_API/include/",
         "${workspaceFolder}/lib/tiny/include",
         "${workspaceFolder}/src/hardware"
       ],

@@ -14,3 +14,5 @@ MEMORY
 }
 
 INCLUDE "lib/nrf-mdk/8.44.1/nrf_common.ld"
+
+__app_ram_base = ORIGIN(RAM);
