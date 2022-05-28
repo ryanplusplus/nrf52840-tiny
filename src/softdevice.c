@@ -15,7 +15,7 @@ void softdevice_test(void)
 {
   // https://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.s140.api.v7.3.0%2Fs140_msc_overview.html&cp=4_7_4_1_1
 
-  sd_softdevice_enable(
+  // sd_softdevice_enable(
 
   if(0) {
     static volatile uint32_t result;
