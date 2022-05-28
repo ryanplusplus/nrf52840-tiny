@@ -18,10 +18,9 @@ static struct {
   tiny_timer_t timer;
 } self;
 
-static void blink(tiny_timer_group_t* group, void* context)
+static void blink(void* context)
 {
   static bool state;
-  (void)group;
   (void)context;
 
   state = !state;
